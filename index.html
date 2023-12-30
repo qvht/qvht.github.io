@@ -29,6 +29,72 @@ td p { font-size: 100%; }
 
 body { font-size: 80%; }*/
 
+
+            .glitch {
+                position: relative;
+                animation: glitch-skew 1s infinite linear alternate-reverse;
+            }
+
+            .glitch::before {
+                content: attr(data-text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                left: 1px;
+                text-shadow: -1px 0 rgba( 255, 0, 0, .125);
+                clip: rect(44px, 450px, 56px, 0);
+                animation: glitch-before .125s infinite linear alternate-reverse;
+            }
+
+            .glitch::after {
+                content: attr(data-text);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                left: -1px;
+                text-shadow: -1px 0 rgba( 0, 255, 0, .125), 1px 1px rgba( 0, 0, 255, .125);
+                clip: rect(44px, 450px, 56px, 0);
+                animation: glitch-after .125s infinite linear alternate-reverse;
+            }
+
+            @keyframes glitch-before {
+                25% {
+                    clip: rect(6px, 9999px, 43px, 0);
+                    transform: skew(0.96deg);
+                }
+
+                75% {
+                    clip: rect(65px, 9999px, 73px, 0);
+                    transform: skew(0.61deg);
+                }
+            }
+
+            @keyframes glitch-after {
+                25% {
+                    clip: rect(5px, 9999px, 81px, 0);
+                    transform: skew(0.95deg);
+                }
+
+                75% {
+                    clip: rect(34px, 9999px, 46px, 0);
+                    transform: skew(0.06deg);
+                }
+            }
+
+            @keyframes glitch-skew {
+                25% {
+                    transform: skew(2deg);
+                }
+
+                75% {
+                    transform: skew(-1deg);
+                }
+            }
+
   </style>
 </head>
 <body>
@@ -37,13 +103,13 @@ body { font-size: 80%; }*/
 
 <h1>Qvht</h1>
 
-<p>Chant: Be our vengeance, avenge us.</p>
+<p style="text-align: center;">Chant: Be our vengeance, avenge us.</p>
 
 <p>Neuroscientifically: Thought(s) in motion create the mind (brain) and then by extension the body and then the world. Mental rehearsal leads to what we remember: Our ego, that is our sense of self is a shadow of what we spend our time on. Setting intentions and catalyzing them through meditation produces desired results aka magik.</p>
 
-<p>There is no time, only churning.</p>
-
 <p>A 3D object's shadow is 2D, but its shadow can vary depending on its orientation in the third dimension.</p>
+
+<div style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Square_round_triangular_peg.stl/320px-Square_round_triangular_peg.stl.png"></div>
 
 <p>Experienced perception is a simulation of our mind, like a game of make believe, but where we are the builders and the end users simultaneously, yet we have forgotten that we are in control and allowing the scenario to continue on in auto-pilot, aimlessly heading out to no mans land</p>
 
@@ -92,6 +158,12 @@ body { font-size: 80%; }*/
 <p>
   As users traverse this daemon place of tides, choices materialize like currents in the waves. Whispers of information linger in the air, chemical tendrils caress those who dare to explore, and Qvlt stands as a crossroads where destinies entwine and unravel in the vast expanse of cyberspace or the mind or where ever it is that we are.
 </p>
+
+<div style="margin: 5% 25%;text-align: center;" ><hr></div>
+
+<p style="text-align: center;" class="glitch" data-text="There is no time, only churning.">There is no time, only churning.</p>
+
+<div style="margin: 5%;text-align: center;" ><hr></div>
 
 <script src="app.js"></script>
 
