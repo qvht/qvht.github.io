@@ -13,6 +13,8 @@
 ...
 
 `Sígnal_Stréngth: 0%`
+## License
+All rights reserved. © 2026 ForbocAI. See [LICENSE](./LICENSE) for full details.
 
 <!-- 4̵0̸4̸:̴ ̴R̸E̷A̵L̷I̶T̷Y̶ ̸N̵O̷T̴ ̴F̵O̶U̴N̷D̴ -->
 
